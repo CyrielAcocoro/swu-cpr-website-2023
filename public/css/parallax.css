@@ -1,0 +1,4 @@
+.bg-parallax-image {
+    background: url(/images/parallax.png) center center no-repeat;
+    background-attachment: fixed;
+}

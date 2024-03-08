@@ -1,0 +1,50 @@
+.social-media-buttons {
+    display: flex;
+    column-gap: 24px;
+}
+
+.social-media-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    outline: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: grid;
+    place-items: center;
+}
+
+.social-media-button:hover {
+    outline-offset: 3px;
+}
+.social-media-button:hover:nth-child(1) {
+    background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    outline: 2px solid
+        linear-gradient(
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+        );
+}
+
+.social-media-button:hover:nth-child(2) {
+    background-color: #1da1f2;
+}
+
+.social-media-button:hover:nth-child(3) {
+    background-color: #c4302b;
+}
+
+.social-media-button:hover:nth-child(4) {
+    background-color: #0072b1;
+}

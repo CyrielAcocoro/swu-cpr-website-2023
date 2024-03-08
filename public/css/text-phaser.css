@@ -1,0 +1,23 @@
+h1-special {
+    max-width: 42rem;
+    background-color: #ff6a00;
+    background: -webkit-linear-gradient(0deg, #ff6a00, #d300ff, #2700ff);
+    background-size: 48rem auto;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    animation: phaser 4s infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes phaser {
+    0% {
+        background-position: 0% 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0% 100;
+    }
+}

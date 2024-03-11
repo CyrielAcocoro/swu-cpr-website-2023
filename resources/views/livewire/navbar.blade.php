@@ -28,11 +28,12 @@
                     <a href="{{ route('faculty') }}" class="block py-2 pr-4 pl-3 text-base font-medium {{ $currentRoute == 'faculty' ? 'text-[#ffd65b]' : 'text-gray-800' }} hover:text-[#ffd650] transition-colors duration-300">Faculty</a>
                 </li>
                 <li>
-                    <a href="{{ route('about') }}" class="block py-2 pr-4 pl-3 text-base font-medium {{ $currentRoute == 'about' ? 'text-[#ffd65b]' : 'text-gray-800' }} hover:text-[#ffd650] transition-colors duration-300">About</a>
-                </li>
-                <li>
                     <a href="{{ route('student-developer') }}" class="block py-2 pr-4 pl-3 text-base font-medium {{ $currentRoute == 'student-developer' ? 'text-[#ffd65b]' : 'text-gray-800' }} hover:text-[#ffd650] transition-colors duration-300">Students</a>
                 </li>
+                <li>
+                    <a href="{{ route('about') }}" class="block py-2 pr-4 pl-3 text-base font-medium {{ $currentRoute == 'about' ? 'text-[#ffd65b]' : 'text-gray-800' }} hover:text-[#ffd650] transition-colors duration-300">About</a>
+                </li>
+
             </ul>
         </div>
     </div>

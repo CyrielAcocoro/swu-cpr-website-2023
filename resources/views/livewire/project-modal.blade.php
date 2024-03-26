@@ -127,7 +127,6 @@
                          @if($selectedProject && $selectedProject->project_link)
                          <a href="{{ $selectedProject->project_link }}" class="text-start">{{ $selectedProject->project_link }}</a>
                          @else
-                         <img src="{{ url('/admin-images/qr-images/' . $selectedImage) }}" alt="QR code">
                          <p class="text-start">**No project preview available</p>
                          @endif
                      </div>

@@ -1,16 +1,16 @@
-<section class=" bg-dark_gray-900">
+<section class=" bg-white-500">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-20 lg:grid-cols-12">
-        <div class="mr-auto place-self-center lg:col-span-5 prose prose-slate prose-p:text-slate-300 dark:prose-invert">
-            <h1 class="max-w-2xl mb-4 bg-gradient-to-r from-yellow-400 via-purple-500 to-blue-900 bg-clip-text text-transparent text-phaser">{{ $headlineTitle }}</h1>
-            <p class="max-w-2xl mb-6 lg:mb-8">{{$headlineDescription}}</p>
-            <div class="flex flex-row items-center gap-5 prose">
+        <div class="mr-auto place-self-center lg:col-span-5 prose prose-slate dark:prose-invert">
+            <h1 class="max-w-2xl mb-4 bg-gradient-to-r from-maroon-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent text-phaser">{{ $headlineTitle }}</h1>
+            <p class="max-w-2xl mb-6 lg:mb-8 prose prose-p:text-dark_gray-500">{{$headlineDescription}}</p>
+            <div class="flex flex-row items-center gap-5 my-2">
                 <a href="/project" class="flex items-center justify-center font-medium text-center md:text-xs lg:text-sm text-white rounded-lg button-custom">
                     Get started
                     <svg>
                         <rect class="px-5 py-5 mr-3 m-2" x="0" y="0" fill="none" width="100%" height="100%" />
                     </svg>
                 </a>
-                <a href="/about" class="flex items-center justify-center font-medium text-center md:text-xs lg:text-sm text-white rounded-lg button-custom">
+                <a href="/about" class="flex items-center justify-center font-medium text-center md:text-xs lg:text-sm text-white rounded-lg button-custom-other">
                     About
                     <svg>
                         <rect class="px-5 py-5 mr-3 m-2" x="0" y="0" fill="none" width="100%" height="100%" />

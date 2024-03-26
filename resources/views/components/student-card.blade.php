@@ -1,4 +1,4 @@
-<div class="flex flex-col items-center p-6 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+<div class="flex flex-col items-center p-6 rounded-xl bg-white-500 shadow-xl hover:drop-shadow-xl transition-all duration-500">
     <div class="w-36 h-36 mb-4 overflow-hidden rounded-full shadow-md">
         <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" alt="student developer avatar" src="{{ $image }}" />
     </div>

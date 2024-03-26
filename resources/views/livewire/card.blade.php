@@ -1,7 +1,7 @@
-<div class="flex flex-wrap items-start justify-start gap-0.5 w-full">
+<div class="flex flex-wrap items-start justify-start gap-1 mx-auto w-full">
     @foreach ($projects as $project)
     @if($project->is_published === "1")
-    <div class="bg-white flex flex-col items-center justify-center gap-0.5 rounded-md max-w-md m-2">
+    <div class="bg-white flex flex-col items-center justify-center gap-0.5 rounded-md max-w-md mx-auto">
         @if (!empty($project->files) && count($project->files) > 0)
         <button x-data x-on:click="Livewire.dispatchTo(null, 'project-modal','show', [{{ $project->id }}])" loading="lazy" class="relative cursor-pointer transform transition duration-500 hover:scale-105 w-[390px] h-[270px] bg-white">
             <img class="relative rounded-lg w-full h-full object-contain cursor-pointer" alt="Project Image" src="{{ asset('/admin-images/'. $project->files[0]) }}" />

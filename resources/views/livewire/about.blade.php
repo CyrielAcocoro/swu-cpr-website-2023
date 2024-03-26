@@ -1,54 +1,60 @@
-<main class="mb-auto">
+<main class="bg-white-500 mb-auto">
     <div class="overflow prose prose-slate prose-p:text-lg dark:prose-invert mx-auto max-w-screen-xl">
         <section class="flex justify-center align-center py-24 lg:py-48">
             <div class="flex flex-col items-center justify-center text-center">
-                <h2>About us</h2>
+                <h1 class="m-0">About</h1>
                 <p>
-                    We are a passionate team of IT students from Southwestern University
-                    - PHINMA, driven by a common goal: to create a positive impact
-                    through innovative IT solutions. Over the years, we have witnessed
-                    countless projects developed by ourselves and our fellow IT
-                    students, each showcasing the exceptional skills and creativity that
-                    our institution nurtures.
+                    SWU PHINMA aims to transform students into successful professionals that are ready to change the world. It does this through a practice-focused, relevant, and high-quality learning process in a supportive environment, ensuring success through confidence-building and empowering formation.
                 </p>
             </div>
         </section>
         <section class="flex flex-col md:flex-row justify-between items-center mx-auto py-16 md:py-18 lg:py-20 gap-4 md:gap-20">
             <div class="order-2 flex flex-col items-center justify-center text-center md:order-1 lg:order-1 ">
-                <h2>Our Mission</h2>
+                <h1 class="m-0">Mission</h1>
                 <p>
-                    Realizing that these projects were gathering digital dust in
-                    isolated storage spaces, we felt compelled to establish a platform
-                    that would bring them into the spotlight. Thus, we developed this
-                    website repository as a way to share and celebrate the remarkable
-                    work of our University's IT students.
+                    SWU PHINMA aims to transform students into successful professionals that are ready to change the world. It does this through a practice-focused, relevant, and high-quality learning process in a supportive environment, ensuring success through confidence-building and empowering formation.
                 </p>
             </div>
             <img class="w-full md:w-[500px] h-auto order-1 md:order-2 lg:order-2" alt="" src="{{url('/images/missionImage.svg')}}" />
         </section>
         <section class="flex flex-col md:flex-row justify-between items-center mx-auto py-16 md:py-18 lg:py-20 gap-4 md:gap-20 h-auto md:h-4/6">
-            <img class="w-full md:w-[500px] h-auto" alt="" src="{{url('/images/collaborationImage.svg')}}" />
+            <img class="w-full md:w-[500px] h-auto" alt="Vision image" src="{{url('/images/collaborationImage.svg')}}" />
             <div class="flex flex-col items-center justify-center text-center">
-                <h2>
-                    Fostering collaboration
-                </h2>
-                <p>
-                    By providing a space for these projects to be showcased online, we
-                    aim to not only highlight the students' abilities and innovative
-                    thinking but also to inspire future generations to build upon these
-                    ideas. We believe that by connecting the IT community within our
-                    university, we can foster collaboration, exchange knowledge, and
-                    continue to push the boundaries of what is possible in the world of technology.
+                <h1 class="m-0">
+                    Vision
+                </h1>
+                <p class="mt-6 mb-4">
+                    Prepare students to become the best that they can be, the BSIT Program is designed to produce versatile and globally competitive IT professionals that are productive right away. It seeks to produce graduates that are:
                 </p>
+                <ul class="flex flex-col item-start justify-start list-outside list-disc m-0 ">
+                    <li class="text-left m-0 prose-lg">
+                        Resourceful problem-solvers;
+                    </li>
+                    <li class="text-left m-0 prose-lg">
+                        Designers, innovators, and creators of solutions;
+                    </li>
+                    <li class="text-left m-0 prose-lg">
+                        Agile, adaptive, and responsive to changes in the dynamic field of Information Technology (IT);
+                    </li>
+                    <li class="text-left m-0 prose-lg">
+                        Active seekers of collaborations;
+                    </li>
+                    <li class="text-left m-0 prose-lg">
+                        Effective communicators;
+                    </li>
+                    <li class="text-left m-0 prose-lg">
+                        Equipped to be leaders and primed to reach the heights of their professions;
+                        and ready to change the world. </li>
+                </ul>
             </div>
         </section>
 
         <section class="flex flex-col items-center justify-center mx-auto gap-12 py-16 md:py-18 lg:py-20">
             <img class="w-full md:w-96 lg:w-500 h-auto" alt="" src="{{url('/images/meetTheTeamImage.svg')}}" />
             <div class="flex flex-col items-center justify-center text-center">
-                <h2>
+                <h1 class="m-0">
                     Meet The Team
-                </h2>
+                </h1>
                 <p>
                     Discover the talented student developers who built this IT
                     solution from scratch. Through their dedication and expertise,

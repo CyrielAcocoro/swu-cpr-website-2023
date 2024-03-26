@@ -20,7 +20,6 @@ class faculty extends Model
         'position',
         'about',
         'is_active',
-        'full_name',
     ];
 
     public function getFullNameAttribute()

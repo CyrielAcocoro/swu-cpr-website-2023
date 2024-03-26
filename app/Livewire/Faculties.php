@@ -12,7 +12,7 @@ class Faculties extends Component
 
     public function mount()
     {
-        $this->faculty = faculty::all();
+        $this->faculty = faculty::where('is_active', true)->get()->sortBy('last_name');
     }
     public function render()
     {

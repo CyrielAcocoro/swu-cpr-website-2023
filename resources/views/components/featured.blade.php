@@ -2,8 +2,8 @@
     <div class="flex flex-col md:flex-row w-full h-full">
         <div class="flex order-2 basis-2/5 item-start justify-start p-6 md:order-1">
             <div class="flex flex-1 flex-col justify-between p-4 md:p-6">
-                <div>
-                    <h1 class="text-xl md:text-2xl font-semibold transition duration-300 ease-in-out hover:text-[#ffd650]">{{$title}}</h1>
+                <div class="prose prose-h1:text-maroon-400 prose-p:text-dark_gray-500">
+                    <h1 class="text-xl md:text-2xl font-semibold ">{{$title}}</h1>
                     <p class="line-clamp-3 md:line-clamp-6 text-base md:text-lg transition duration-300 ease-in-out">{{$description}}</p>
                 </div>
                 <a href="/project" class="mt-2 no-underline uppercase tracking-wider cursor-pointer hover:text-[#ffd650] transition duration-300 ease-in-out">See Project</a>

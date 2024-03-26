@@ -15,7 +15,7 @@ class Card extends Component
 
     use WithPagination;
 
-    public $perPage = 11;
+    public $perPage = 8;
     public $page = 1;
 
     protected $listeners = ['searchUpdated' => 'updateProjects', 'filterCategory' => 'filterProjects', 'loadMoreProjects' => 'loadMore'];

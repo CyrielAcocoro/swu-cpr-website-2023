@@ -1,7 +1,7 @@
 <main class="mb-auto">
     <x-hero headlineDescription="{{$headline->description}}" headlineTitle="{{$headline->title }}" />
     <!-- Carousel Start -->
-    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <div id="default-carousel" class="bg-white-500 relative w-full" data-carousel="slide">
         <div class="relative h-[1112px] max-h-[712px] overflow-hidden rounded-lg">
             @foreach ($projects as $key => $project)
             @if($project->is_featured === "1")
@@ -11,7 +11,6 @@
             </div>
             @endif
             @endforeach
-
         </div>
 
         <!-- Slider indicators -->

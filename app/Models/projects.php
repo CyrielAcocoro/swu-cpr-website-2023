@@ -26,7 +26,6 @@ class projects extends Model
         'developer',
         'is_featured',
         'is_published',
-        'qr',
     ];
 
     protected $casts = [

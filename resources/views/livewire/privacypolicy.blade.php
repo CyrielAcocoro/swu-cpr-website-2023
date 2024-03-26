@@ -147,7 +147,7 @@
             <h1>Contact Us</h1>
             <p>If you have any questions about this Privacy Policy, You can contact us:</p>
             <ul style="list-style-type:disc;">
-                <li>By email: inoshiba0@gmail.com</li>
+                <li>By email: swucpr.2023@gmail.com</li>
             </ul>
 
             <div class="border-t border-slate-1000/5 py-50">

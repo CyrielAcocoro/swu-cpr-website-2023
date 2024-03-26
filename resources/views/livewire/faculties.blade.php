@@ -1,4 +1,4 @@
-<main class="mb-auto">
+<main class="bg-white-500 mb-0">
     <div class="overflow prose-slate prose-p:text-md dark:prose-invert mx-auto ">
         <div class="relative overflow-hidden bg-cover bg-no-repeat bg-center w-full h-[912px]" style="
         background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/146.webp');
@@ -6,10 +6,10 @@
             <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed">
                 <div class="flex h-full items-center justify-center">
                     <div class="px-6 text-center text-white md:px-12">
-                        <h1 class="text-white mt-2 text-3xl font-bold tracking-tight md:text-4xl xl:text-5xl">
+                        <h1 class="text-white-500 mt-2 text-3xl font-bold tracking-tight md:text-4xl xl:text-5xl">
                             Inspiring Minds, <br /><span>Empowering Futures</span>
                         </h1>
-                        <p class="text-white text-center mt-8 mb-16 text-base md:text-base lg:text-xl max-w-screen-2xl">
+                        <p class="text-white-500 text-center mt-8 mb-16 text-base md:text-base lg:text-xl max-w-screen-2xl">
                             Welcome to our Information Technology Department, where we are committed to inspiring minds and empowering futures. Our dedicated faculty members are industry professionals who bring a wealth of knowledge and experience into the classroom. They are passionate about shaping the next generation of IT leaders and innovators. Explore their profiles below to learn more about their expertise and contributions.
                         </p>
                         <button type="button" class="rounded-full border-2 border-neutral-50 p-4 text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out  hover:bg-neutral-100 hover:bg-opacity-10 hover:text-neutral-100 " x-on:click="document.getElementById('facultyElement').scrollIntoView({ behavior: 'smooth' })">
@@ -21,12 +21,12 @@
                 </div>
             </div>
         </div>
-        <div id="facultyElement" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-12 py-12 m-2 max-w-screen-2xl">
-            @foreach ($faculty->sortBy('fullName') as $faculty)
-            @if ($faculty->is_active)
-            <x-faculty-card alt="{{ $faculty->fullName }}" about="{{ $faculty->about }}" avatar="{{ asset('/admin-images/' . $faculty->image) }}" name="{{ $faculty->fullName }}" position="{{ $faculty->position }}" specialization="{{ implode(', ', $faculty->specialization) }}" />
-            @endif
-            @endforeach
+        <div id="facultyElement" class="m-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-12 py-12 m-auto max-w-screen-2xl">
+                @foreach ($faculty as $facultyMember)
+                <x-faculty-card alt="{{ $facultyMember->fullName }}" about="{{ $facultyMember->about }}" avatar="{{ asset('/admin-images/' . $facultyMember->image) }}" name="{{ $facultyMember->fullName }}" position="{{ $facultyMember->position }}" specialization="{{ implode(', ', $facultyMember->specialization) }}" />
+                @endforeach
+            </div>
         </div>
     </div>
 </main>

@@ -1,8 +1,8 @@
 <section class=" bg-white-500">
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-20 lg:grid-cols-12">
-        <div class="mr-auto place-self-center lg:col-span-5 prose prose-slate dark:prose-invert">
-            <h1 class="max-w-2xl mb-4 bg-gradient-to-r from-maroon-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent text-phaser">{{ $headlineTitle }}</h1>
-            <p class="max-w-2xl mb-6 lg:mb-8 prose prose-p:text-dark_gray-500">{{$headlineDescription}}</p>
+    <div class="grid max-w-screen-2xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-20 lg:grid-cols-12">
+        <div class="place-self-center lg:col-span-5 prose prose-p:text-dark_gray-400 prose-p:text-lg prose-slate dark:prose-invert w-full">
+            <h1 class=" text-6xl mb-4 bg-gradient-to-r from-maroon-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent text-phaser ">{{ $headlineTitle }}</h1>
+            <p class="max-w-2xl mb-6 lg:mb-8">{{$headlineDescription}}</p>
             <div class="flex flex-row items-center gap-5 my-2">
                 <a href="/project" class="flex items-center justify-center font-medium text-center md:text-xs lg:text-sm text-white rounded-lg button-custom">
                     Get started

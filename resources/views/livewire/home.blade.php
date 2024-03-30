@@ -41,6 +41,6 @@
         </button>
     </div>
     <!-- Carousel End -->
-
+    <livewire:share-buttons />
     <x-testimonial />
 </main>

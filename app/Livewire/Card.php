@@ -12,13 +12,15 @@ class Card extends Component
     public $projects = [];
     public $categories;
     public $search = '';
+    public $school_year;
+    public $subject_code;
 
     use WithPagination;
 
-    public $perPage = 8;
+    public $perPage = 40;
     public $page = 1;
 
-    protected $listeners = ['searchUpdated' => 'updateProjects', 'filterCategory' => 'filterProjects', 'loadMoreProjects' => 'loadMore'];
+    protected $listeners = ['searchUpdated' => 'updateProjects', 'filterCategory' => 'filterProjects', 'loadMoreProjects' => 'loadMore', 'filteredSchoolYear' => 'filterSchoolYear', 'filteredSubjectCodes' => 'filterSubjectCode'];
 
     public function mount()
     {
@@ -42,6 +44,20 @@ class Card extends Component
         $this->categories = categories::withCount('projects')->get();
     }
 
+    public function filterSchoolYear($school_year)
+    {
+        $this->school_year = $school_year;
+        $this->resetLoadMore();
+        $this->fetchProjects();
+    }
+
+    public function filterSubjectCode($subject_code)
+    {
+        $this->subject_code = $subject_code;
+        $this->resetLoadMore();
+        $this->fetchProjects();
+    }
+
     public function fetchProjects()
     {
         $query = projects::latest();
@@ -52,6 +68,16 @@ class Card extends Component
                     $query->where('first_name', 'like', '%' . $this->search . '%')
                         ->orWhere('last_name', 'like', '%' . $this->search . '%');
                 });
+        }
+
+        if ($this->school_year) {
+            $query = $query->where('school_year', $this->school_year);
+        }
+
+        if ($this->subject_code) {
+            $query = $query->whereHas('subject', function ($query) {
+                $query->where('subject_code', $this->subject_code);
+            });
         }
 
         $newProjects = $query->offset(($this->page - 1) * $this->perPage)

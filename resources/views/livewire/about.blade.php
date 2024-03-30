@@ -3,17 +3,29 @@
         <section class="flex justify-center align-center py-24 lg:py-48">
             <div class="flex flex-col items-center justify-center text-center">
                 <h1 class="m-0">About</h1>
+                @if($programDetails->about)
                 <p>
-                    SWU PHINMA aims to transform students into successful professionals that are ready to change the world. It does this through a practice-focused, relevant, and high-quality learning process in a supportive environment, ensuring success through confidence-building and empowering formation.
+                    {{$programDetails->about}}
                 </p>
+                @else
+                <p>
+                    There are no post available at the moment.
+                </p>
+                @endif
             </div>
         </section>
         <section class="flex flex-col md:flex-row justify-between items-center mx-auto py-16 md:py-18 lg:py-20 gap-4 md:gap-20">
             <div class="order-2 flex flex-col items-center justify-center text-center md:order-1 lg:order-1 ">
                 <h1 class="m-0">Mission</h1>
+                @if($programDetails->mission)
                 <p>
-                    SWU PHINMA aims to transform students into successful professionals that are ready to change the world. It does this through a practice-focused, relevant, and high-quality learning process in a supportive environment, ensuring success through confidence-building and empowering formation.
+                    {{$programDetails->mission}}
                 </p>
+                @else
+                <p>
+                    There are no post available at the moment.
+                </p>
+                @endif
             </div>
             <img class="w-full md:w-[500px] h-auto order-1 md:order-2 lg:order-2" alt="" src="{{url('/images/missionImage.svg')}}" />
         </section>
@@ -23,29 +35,15 @@
                 <h1 class="m-0">
                     Vision
                 </h1>
-                <p class="mt-6 mb-4">
-                    Prepare students to become the best that they can be, the BSIT Program is designed to produce versatile and globally competitive IT professionals that are productive right away. It seeks to produce graduates that are:
+                @if($programDetails->vision)
+                <p>
+                    {{$programDetails->vision}}
                 </p>
-                <ul class="flex flex-col item-start justify-start list-outside list-disc m-0 ">
-                    <li class="text-left m-0 prose-lg">
-                        Resourceful problem-solvers;
-                    </li>
-                    <li class="text-left m-0 prose-lg">
-                        Designers, innovators, and creators of solutions;
-                    </li>
-                    <li class="text-left m-0 prose-lg">
-                        Agile, adaptive, and responsive to changes in the dynamic field of Information Technology (IT);
-                    </li>
-                    <li class="text-left m-0 prose-lg">
-                        Active seekers of collaborations;
-                    </li>
-                    <li class="text-left m-0 prose-lg">
-                        Effective communicators;
-                    </li>
-                    <li class="text-left m-0 prose-lg">
-                        Equipped to be leaders and primed to reach the heights of their professions;
-                        and ready to change the world. </li>
-                </ul>
+                @else
+                <p>
+                    There are no post available at the moment.
+                </p>
+                @endif
             </div>
         </section>
 

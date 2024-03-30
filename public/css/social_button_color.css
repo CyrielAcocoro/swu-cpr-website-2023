@@ -1,0 +1,41 @@
+.facebook-button {
+    background-color: #3b5998;
+}
+.facebook-button:hover {
+    background-color: #2d4373;
+}
+
+.twitter-button {
+    background-color: #1da1f2;
+}
+.twitter-button:hover {
+    background-color: #0c85d0;
+}
+
+.linkedin-button {
+    background-color: #0077b5;
+}
+.linkedin-button:hover {
+    background-color: #005582;
+}
+
+.reddit-button {
+    background-color: #ff4500;
+}
+.reddit-button:hover {
+    background-color: #cc3700;
+}
+
+.whatsapp-button {
+    background-color: #25d366;
+}
+.whatsapp-button:hover {
+    background-color: #1da851;
+}
+
+.pinterest-button {
+    background-color: #bd081c;
+}
+.pinterest-button:hover {
+    background-color: #8d0615;
+}

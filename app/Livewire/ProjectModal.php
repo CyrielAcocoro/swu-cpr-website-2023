@@ -15,7 +15,6 @@ class ProjectModal extends Component
     protected $shareService;
     public $selectedProject;
     public $selectedImage;
-
     #[On('show')]
     public function show($projectId)
     {

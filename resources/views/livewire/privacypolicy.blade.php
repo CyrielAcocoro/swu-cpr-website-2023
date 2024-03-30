@@ -1,13 +1,13 @@
 <div class="relative -mt-[5.75rem] overflow-hidden pt-[5.75rem]">
     <img src="/img/beams-basic.png" alt="" class="absolute left-1/2 top-0 -ml-[39rem] w-[113.125rem] max-w-none">
     <div class="px-4 sm:px-6 lg:px-8">
-        <div class="relative mx-auto max-w-[37.5rem] pt-20 text-center pb-24">
-            <h class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Privacy Policy</h>
+        <div class="relative mx-auto max-w-screen-xl pt-20 text-center pb-24">
+            <h class="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">Privacy Policy</h>
             <p class="mt-4 text-base leading-7 text-slate-600">Last updated on December 16, 2023</p>
         </div>
     </div>
     <div class="relative px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-[40rem] prose-sm prose prose-slate prose-a:font-semibold prose-a:text-sky-500 hover:prose-a:text-sky-600">
+        <div class="mx-auto max-w-screen-xl prose-sm prose prose-slate prose-p:text-lg prose-li:text-base prose-a:font-semibold prose-a:text-sky-500 hover:prose-a:text-sky-600">
             <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
             <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator. </p>
 
@@ -17,7 +17,7 @@
             <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural. </p>
             <h2>Definitions</h2>
             <p>For the purposes of this Privacy Policy:</p>
-            <ul style="list-style-type:disc;">
+            <ul class="marker:text-dark_gray-900 list-disc">
                 <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
                 <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
                 <li><strong>Application</strong> refers to SWU CPR, the software program provided by the Company.</li>
@@ -38,7 +38,7 @@
             <h3>Personal Data</h3>
             <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
             </p>
-            <ul style="list-style-type:disc;">
+            <ul class="marker:text-dark_gray-900 list-disc">
                 <li>Email address</li>
                 <li>First name and Last name</li>
                 <li>Usage Data</li>
@@ -51,13 +51,13 @@
 
             <h3>Tracking Technologies and Cookies</h3>
             <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
-            <ul style="list-style-type:disc;">
+            <ul class="marker:text-dark_gray-900 list-disc">
                 <li><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
                 <li><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li>
             </ul>
             <p>Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on TermsFeed website article.</p>
             <p>We use both Session and Persistent Cookies for the purposes set out below:</p>
-            <ul style="list-style-type:disc;">
+            <ul class="marker:text-dark_gray-900 list-disc">
                 <li><strong>Necessary / Essential Cookies</strong>
                     <p>Type: Session Cookies</p>
                     <p>Administered by: Us</p>
@@ -78,7 +78,7 @@
 
             <h2>Use of Your Personal Data</h2>
             <p>The Company may use Personal Data for the following purposes:</p>
-            <ul style="list-style-type:disc;">
+            <ul class="marker:text-dark_gray-900 list-disc">
                 <li><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.
                 <li><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</li>
                 <li><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</li>
@@ -89,7 +89,7 @@
                 <li><strong>For other purposes:</strong> We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</li>
             </ul>
             <p>We may share Your personal information in the following situations:</p>
-            <ul style="list-style-type:disc;">
+            <ul class="marker:text-dark_gray-900 list-disc">
                 <li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</li>
                 <li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
                 <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
@@ -120,7 +120,7 @@
             <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
             <h3>Other legal requirements</h3>
             <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
-            <ul style="list-style-type:disc;">
+            <ul class="marker:text-dark_gray-900 list-disc">
                 <li>Comply with a legal obligation</li>
                 <li>Protect and defend the rights or property of the Company</li>
                 <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
@@ -146,7 +146,7 @@
 
             <h1>Contact Us</h1>
             <p>If you have any questions about this Privacy Policy, You can contact us:</p>
-            <ul style="list-style-type:disc;">
+            <ul class="marker:text-dark_gray-900 list-disc">
                 <li>By email: swucpr.2023@gmail.com</li>
             </ul>
 
@@ -154,3 +154,7 @@
 
                 <p>Generated using TermsFeed Privacy Policy Generator
                 <p>© 2023 Southwestern CITE CPR. All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>

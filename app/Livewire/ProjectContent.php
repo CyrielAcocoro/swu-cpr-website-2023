@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\subject;
 use Livewire\Component;
 use App\Models\categories;
 
@@ -10,6 +11,8 @@ class ProjectContent extends Component
     public $categories, $projects;
     public $search = "";
     public $filteredProject;
+    public $school_year;
+    public $subject_codes;
 
     public function filterProjectsByCategory($categoryId)
     {
@@ -27,6 +30,18 @@ class ProjectContent extends Component
     public function mount()
     {
         $this->categories = categories::withCount('projects')->get();
+        $this->subject_codes = subject::all();
+    }
+    public function filterSchoolYear($school_year)
+    {
+        $this->filteredProject = $school_year;
+        $this->dispatch('filteredSchoolYear', $school_year);
+    }
+
+    public function filterSubjectCode($subject_codes)
+    {
+        $this->filteredProject = $subject_codes;
+        $this->dispatch('filteredSubjectCodes', $subject_codes);
     }
 
 

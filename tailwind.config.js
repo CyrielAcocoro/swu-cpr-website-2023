@@ -40,6 +40,9 @@ export default {
                     400: "#E5E5E5",
                     500: "#ffffff",
                 },
+                yellow: {
+                    400: "#ffd65b",
+                },
             },
             animation: {
                 "infinite-scroll": "infinite-scroll 40s linear infinite",

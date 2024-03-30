@@ -4,9 +4,15 @@
       ">
         <div class="relative flex flex-col items-center justify-center w-full h-full">
             <div class="absolute inset-0 bg-black opacity-75"></div>
+            @if($projectHeadline)
             <h1 class="relative text-2xl text-white-500">
-                I.T - The Way It Should Be
+                {{$projectHeadline->headline}}
             </h1>
+            @else
+            <h1 class="relative text-2xl text-white-500">
+                There are no project headlines available at the moment.
+            </h1>
+            @endif
         </div>
     </div>
     <livewire:project-content />

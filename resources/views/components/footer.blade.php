@@ -35,11 +35,11 @@
             Pages
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-base text-white-400">
-            <a class="hover:text-maroon-400" href="/" wire:navigate> Home </a>
-            <a class="hover:text-maroon-400" href="/project" wire:navigate> Projects </a>
-            <a class="hover:text-maroon-400" href="/faculty" wire:navigate> Faculty </a>
-            <a class="hover:text-maroon-400" href="/about" wire:navigate> About </a>
-            <a class="hover:text-maroon-400" href="/student-developer" wire:navigate> Students </a>
+            <a class="hover:text-yellow-400" href="/" wire:navigate> Home </a>
+            <a class="hover:text-yellow-400" href="/project" wire:navigate> Projects </a>
+            <a class="hover:text-yellow-400" href="/faculty" wire:navigate> Faculty </a>
+            <a class="hover:text-yellow-400" href="/about" wire:navigate> About </a>
+            <a class="hover:text-yellow-400" href="/student-developer" wire:navigate> Students </a>
           </nav>
         </div>
         <div>
@@ -47,8 +47,8 @@
             Links
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-base text-white-400">
-            <a class="hover:text-maroon-400" target="_blank" href="https://swu.phinma.edu.ph/"> SWU-PHINMA Official Website </a>
-            <a class="hover:text-maroon-400" target="_blank" href="https://www.facebook.com/groups/swuphinmastudentcommunity"> SWU-PHiNMA Student Life </a>
+            <a class="hover:text-yellow-400" target="_blank" href="https://swu.phinma.edu.ph/"> SWU-PHINMA Official Website </a>
+            <a class="hover:text-yellow-400" target="_blank" href="https://www.facebook.com/groups/swuphinmastudentcommunity"> SWU-PHiNMA Student Life </a>
           </nav>
         </div>
         <div>
@@ -56,7 +56,7 @@
             Admin Portal
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-base text-white-400">
-            <a class="hover:text-maroon-400" target="_blank" href="http://127.0.0.1:8001/"> SWU-CPR Admin Portal </a>
+            <a class="hover:text-yellow-400" target="_blank" href="http://127.0.0.1:8001/"> SWU-CPR Admin Portal </a>
           </nav>
         </div>
         <div>
@@ -64,7 +64,7 @@
             Legal
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-base text-white-400">
-            <a class="hover:text-maroon-400" href="/privacypolicy" wire:navigate> Privacy Policy </a>
+            <a class="hover:text-yellow-400" href="/privacypolicy" wire:navigate> Privacy Policy </a>
           </nav>
         </div>
       </div>

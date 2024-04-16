@@ -24,7 +24,7 @@ class developers extends Model
 
     public function projects()
     {
-        return $this->belongsToMany(projects::class);
+        return $this->belongsToMany(projects::class, 'project_developers', 'developers_id', 'projects_id');
     }
     public function setFullNameAttribute()
     {

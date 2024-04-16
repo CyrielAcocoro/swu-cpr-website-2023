@@ -29,7 +29,7 @@
             </div>
             <img class="w-full md:w-[500px] h-auto order-1 md:order-2 lg:order-2" alt="" src="{{url('/images/missionImage.svg')}}" />
         </section>
-        <section class="flex flex-col md:flex-row justify-between items-center mx-auto py-16 md:py-18 lg:py-20 gap-4 md:gap-20 h-auto md:h-4/6">
+        <section class="flex flex-col md:flex-row justify-between items-center mx-auto py-16 md:py-18 lg:py-20 gap-4 md:gap-20 h-auto md:h-4/6 fade-on-scroll">
             <img class="w-full md:w-[500px] h-auto" alt="Vision image" src="{{url('/images/collaborationImage.svg')}}" />
             <div class="flex flex-col items-center justify-center text-center">
                 <h1 class="m-0">
@@ -47,7 +47,7 @@
             </div>
         </section>
 
-        <section class="flex flex-col items-center justify-center mx-auto gap-12 py-16 md:py-18 lg:py-20">
+        <section class="flex flex-col items-center justify-center mx-auto gap-12 py-16 md:py-18 lg:py-20 fade-on-scroll">
             <img class="w-full md:w-96 lg:w-500 h-auto" alt="" src="{{url('/images/meetTheTeamImage.svg')}}" />
             <div class="flex flex-col items-center justify-center text-center">
                 <h1 class="m-0">

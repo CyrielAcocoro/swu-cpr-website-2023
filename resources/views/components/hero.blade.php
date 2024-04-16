@@ -1,7 +1,7 @@
-<section class=" bg-white-500">
-    <div class="grid max-w-screen-2xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-20 lg:grid-cols-12">
-        <div class="place-self-center lg:col-span-5 prose prose-p:text-dark_gray-400 prose-p:text-lg prose-slate dark:prose-invert w-full">
-            <h1 class=" text-6xl mb-4 bg-gradient-to-r from-maroon-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent text-phaser ">{{ $headlineTitle }}</h1>
+<section class="bg-white-500">
+    <div class="relative grid max-w-screen-3xl h-[1000px] px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-20 lg:grid-cols-12">
+        <div class="place-self-center mb-24 lg:col-span-5 prose prose-p:text-dark_grey-100 prose-p:text-2xl prose-slate dark:prose-invert w-full">
+            <h1 class=" text-6xl xl:text-6xl mb-4 bg-gradient-to-r from-maroon-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent text-phaser ">{{ $headlineTitle }}</h1>
             <p class="max-w-2xl mb-6 lg:mb-8">{{$headlineDescription}}</p>
             <div class="flex flex-row items-center gap-5 my-2">
                 <a href="/project" class="flex items-center justify-center font-medium text-center md:text-xs lg:text-sm text-white rounded-lg button-custom">
@@ -18,19 +18,20 @@
                 </a>
             </div>
         </div>
-        <div class="hidden lg:mt-0 lg:col-span-7 lg:flex p-4 mb-4 justify-center items-center">
+        <div class="hidden absolute place-self-end "></div>
+        <div class="hidden absolute place-self-end pr-56 lg:mt-0 lg:col-span-7 lg:flex p-4 mb-4 justify-center items-center">
             <div class="image-container custom-rotation transform rotate-x-51 rotate-z-43 grid grid-gap-8 grid-cols-2">
                 <a href="/projects" class="tile tile-1 cursor-pointer custom-style">
-                    <img src="https://img.freepik.com/free-vector/spaceship-outer-space-with-planets-asteroids_107791-2262.jpg?w=2000&t=st=1675890192~exp=1675890792~hmac=55d3898dfa4592f8c7819703d7b0e09adf14b6b408368a3f54f7266c1c12adc9" alt="Image" class="w-150 h-150 object-cover opacity-100 transition-transform transition-box-shadow transition-top transition-left">
+                    <img src="/images/lacav.png">
                 </a>
                 <div class="tile tile-2 cursor-pointer custom-style">
-                    <img src="https://img.freepik.com/free-vector/sunset-sunrise-ocean-nature-landscape_33099-2244.jpg?w=1380&t=st=1677927684~exp=1677928284~hmac=1cf23f3be67d718e4a1d05cf1a14e893967565a284146bbbb871e6367328c4d8" alt="Image" class="w-150 h-150 object-cover opacity-100 transition-transform transition-box-shadow transition-top transition-left">
+                    <img src="/images/orig.png">
                 </div>
                 <div class="tile tile-3 cursor-pointer custom-style">
-                    <img src="https://img.freepik.com/free-vector/space-illustration-night-alien-fantasy-landscape_33099-1873.jpg?w=2000&t=st=1677928595~exp=1677929195~hmac=ad7aa0e80ea72f9416738daec9444dffde69463e8c0f331b4628984eab0c4820" alt="Image" class="w-150 h-150 object-cover opacity-100 transition-transform transition-box-shadow transition-top transition-left">
+                    <img src="/images/something2.jpg">
                 </div>
                 <div class="tile tile-4 cursor-pointer custom-style">
-                    <img src="https://img.freepik.com/free-vector/nightclub-dance-floor-illustration_33099-2002.jpg?w=2000&t=st=1677928962~exp=1677929562~" alt="Image" class="w-150 h-150 object-cover opacity-100 transition-transform transition-box-shadow transition-top transition-left">
+                    <img src="/images/gambol.png">
                 </div>
             </div>
         </div>

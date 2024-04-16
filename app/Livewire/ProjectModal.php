@@ -11,6 +11,7 @@ use Jorenvh\Share\Share as ShareService;
 
 class ProjectModal extends Component
 {
+    protected $listeners = ['project-modal' => 'show'];
     public $visible = false;
     protected $shareService;
     public $selectedProject;
@@ -38,7 +39,7 @@ class ProjectModal extends Component
     public function getShareLinks()
     {
         if ($this->selectedProject) {
-            $url = url('/project');
+            $url = url('/project/' . $this->selectedProject->id);
             $title = $this->selectedProject->title;
 
             return $this->shareService->page($url, $title)
@@ -84,6 +85,7 @@ class ProjectModal extends Component
         return view('livewire.project-modal', [
             'selected' => $this->selectedProject,
             'shareLinks' => $this->getShareLinks(),
+            'visible' => $this->visible,
         ]);
     }
 }

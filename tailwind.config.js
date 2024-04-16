@@ -29,12 +29,16 @@ export default {
                 maroon: {
                     400: "#8E0B16",
                     500: "#65171D",
+                    600: "#41090D",
+                    700: "#41090D",
+                    900: "#2B0505",
                 },
                 dark_gray: {
-                    100: "#000001",
+                    100: "#121212",
                     400: "#231F20",
                     500: "#797979",
                     900: "#141A27",
+                    customgray: "#1F2937",
                 },
                 white: {
                     400: "#E5E5E5",
@@ -47,6 +51,7 @@ export default {
             animation: {
                 "infinite-scroll": "infinite-scroll 40s linear infinite",
                 "text-phaser": "text-phaser 3s linear infinite",
+                fadeIn: "fadeIn 2s ease-out forwards",
             },
             keyframes: {
                 "infinite-scroll": {
@@ -57,9 +62,24 @@ export default {
                     "0%": { backgroundPosition: "0% 0" },
                     "100%": { backgroundPosition: "100% 0" },
                 },
+                fadeIn: {
+                    "0%": { opacity: 0 },
+                    "100%": { opacity: 1 },
+                },
             },
             boxShadow: {
                 card: "0px 2px 8px 0px rgba(99, 99, 99, 0.30)",
+            },
+            backgroundImage: (theme) => ({
+                "maroon-gradient":
+                    "linear-gradient(to right, #8E0B16, #65171D, #8E0B16)",
+                "gradient-tr-to-bl":
+                    "linear-gradient(to bottom left, #8E0B16 0%, #F8B195 100%)",
+                "gradient-four-colors":
+                    "linear-gradient(to right, #65171D 0%, #41090D 50%, transparent 100%)",
+            }),
+            backgroundColor: {
+                glass: "rgba(255, 255, 255, 0.15)", // Adjust the opacity as needed
             },
         },
     },

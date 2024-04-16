@@ -29,13 +29,13 @@ class projects extends Model
     ];
 
     protected $casts = [
-        'developer' => 'array',
+        'developer' => 'json',
         'files' => 'json',
     ];
 
     public function developers()
     {
-        return $this->belongsToMany(developers::class, 'project_developers');
+        return $this->belongsToMany(developers::class, 'project_developers', 'projects_id', 'developers_id');
     }
 
     public function category()

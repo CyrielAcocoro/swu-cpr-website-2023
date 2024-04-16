@@ -1,5 +1,5 @@
-<div class="bg-white-500 flex flex-col items-center justify-center mx-auto py-8 h-fit">
-    <div class="flex flex-col lg:flex-row items-center justify-start mx-6 w-full h-full divide-y lg:divide-y-0 lg:divide-x">
+<div class="bg-white-500 flex flex-col items-start justify-start mx-auto py-8 h-fit">
+    <div class="flex flex-col lg:flex-row items-start justify-start mx-6 w-full h-full divide-y lg:divide-y-0 lg:divide-x">
         <!-- Search and Categories Section -->
         <div class="flex flex-grow py-4 lg:flex-shrink-0 lg:basis-1/12 px-4 lg:mb-0 items-start justify-start max-h-full w-screen">
             <div class="flex flex-col items-start justify-start gap-2 w-full h-full ">
@@ -26,9 +26,9 @@
                             <h3>
                                 Filter
                             </h3>
-                            <div class="gap-4">
-                                <div>
-                                    <select wire:model.live.debounce.250ms=" school_year" class="rounded p-2 border border-gray-300 transition duration-300 ease-in-out hover:border-yellow-300 focus:border-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-opacity-50 bg-white w-full">
+                            <div class="space-y-4">
+                                <div wire:key="{{ $filterKey }}">
+                                    <select wire:change="filterSchoolYear($event.target.value)" class="rounded p-2 border border-gray-300 transition duration-300 ease-in-out hover:border-yellow-300 focus:border-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-opacity-50 bg-white w-full">
                                         <option value="">Select School Year</option>
                                         <option value="2022-2023">2021-2022</option>
                                         <option value="2023-2024">2023-2024</option>
@@ -45,9 +45,9 @@
                                         <option value="2034-2035">2034-2035</option>
                                     </select>
                                 </div>
-                                <div>
-                                    <select wire:model.live.debounce.250ms="subject_id" class="rounded p-2 border border-gray-300 transition duration-300 ease-in-out hover:border-yellow-300 focus:border-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-opacity-50 bg-white w-full">
-                                        <option value="">Select Subject ID</option>
+                                <div wire:key="{{ $filterKey }}">
+                                    <select wire:change="filterSubjectCode($event.target.value)" class="rounded p-2 border border-gray-300 transition duration-300 ease-in-out hover:border-yellow-300 focus:border-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-opacity-50 bg-white w-full">
+                                        <option value="">Select Subject Code</option>
                                         @foreach($subject_codes as $subject)
                                         <option value="{{ $subject->subject_code }}">{{ $subject->subject_code }}</option>
                                         @endforeach
@@ -56,15 +56,42 @@
                             </div>
                         </div>
                     </div>
+                    <div class="flex justify-end ">
+                        <button wire:click="clearFilters" class="p-1 bg-white text-slate-800 rounded border border-slate-800 font-medium text-sm transition duration-300 ease-in-out hover:bg-yellow-400 hover:text-dark_grey-400 hover:border-yellow-400 transform hover:-translate-y-1 hover:shadow-lg">Clear Filters</button>
+                    </div>
                 </div>
-
             </div>
         </div>
         <div class="flex flex-wrap flex-col items-center justify-center flex-grow lg:basis-10/12 px-4 max-w-full py-4">
-            <livewire:card :projects="$projects" />
+            <div class="flex flex-wrap items-start justify-start gap-y-6 mx-auto w-full">
+                @foreach ($projects as $project)
+                @if($project->is_published === "1")
+                <div class="bg-white flex flex-col items-center justify-center bg-white shadow-md bg-clip-border rounded-xl max-w-md m-2 cursor-pointer transform transition duration-500 hover:scale-105">
+                    @if (!empty($project->files) && count($project->files) > 0)
+                    <button x-data wire:click="$dispatchTo('project-modal','show', [{{ $project->id }}])" loading="lazy" class="w-[370px]">
+                        <img class="relative rounded-t-lg object-contain cursor-pointer w-full h-[270px] " alt="Project Image" src="{{ asset('/admin-images/'. $project->files[0]) }}" />
+                    </button>
+                    @endif
+                    <h2 class="text-dark_gray-400 text-start font-bold text-sm md:text-base lg:text-xl w-full px-4 pt-2">{{$project->title}}</h2>
+                    <div class="w-full flex flex-row items-center pb-[8px] ">
+                        <div class="flex flex-row items-center gap-2 px-4 pt-2">
+                            <div class="rounded-full w-6 h-6 flex items-center justify-center border border-gray-300">
+                                <i class="fa-solid fa-user-tie text-base text-gray-700"></i>
+                            </div>
+                            <p class="leading-4 text-xs font-medium line-clamp-1 w-60 md:text-sm lg:text-base">
+                                @foreach ($project->developer as $developerId)
+                                {{ $developerId }}
+                                @endforeach
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                @endif
+                @endforeach
+            </div>
             @if(empty($search))
             <div class="flex items-center justify-center gap-5 mt-6">
-                <button wire:click="$dispatch('loadMoreProjects')" class="p-1 bg-white text-slate-800 rounded border border-slate-800 font-medium text-sm transition duration-300 ease-in-out hover:bg-maroon-400 hover:text-white-400 hover:border-maroon-400 transform hover:-translate-y-1 hover:shadow-lg">
+                <button wire:click="$dispatch('loadMoreProjects')" class="p-1 bg-white text-slate-800 rounded border border-slate-800 font-medium text-sm transition duration-300 ease-in-out hover:bg-yellow-400 hover:text-dark_grey-400 hover:border-yellow-400 transform hover:-translate-y-1 hover:shadow-lg">
                     Load More
                 </button>
             </div>

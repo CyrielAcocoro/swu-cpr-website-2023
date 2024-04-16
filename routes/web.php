@@ -1,13 +1,14 @@
 <?php
 
 use App\Livewire\StudentDeveloper;
-use Livewire\Livewire;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Project;
 use App\Livewire\About;
 use App\Livewire\Faculties;
 use App\Livewire\PrivacyPolicy;
+use App\Livewire\ProjectDetails;
 use Illuminate\Support\Facades\Artisan;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +29,7 @@ Route::get('/faculty', Faculties::class)->name('faculty');
 Route::get('/project', Project::class)->name('project');
 Route::get('/student-developer', StudentDeveloper::class)->name('student-developer');
 Route::get('/privacypolicy', PrivacyPolicy::class)->name('privacypolicy');
+Route::get('/project/{id}', ProjectDetails::class);
 Route::get('/linkstorage', function () {
     Artisan::call('storage:link');
 });

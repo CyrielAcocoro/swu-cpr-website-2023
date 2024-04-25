@@ -20,7 +20,7 @@ class ProjectModal extends Component
     public function show($projectId)
     {
         $this->visible = true;
-        $this->selectedProject = projects::with(['subject', 'developers', 'category', 'faculty'])
+        $this->selectedProject = projects::with(['subject', 'projectAuthors', 'category', 'faculty'])
             ->find($projectId);
 
         if (!$this->selectedProject) {

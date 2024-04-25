@@ -23,7 +23,6 @@ class projects extends Model
         'category_id',
         'faculty_id',
         'project_link',
-        'developer',
         'is_featured',
         'is_published',
     ];
@@ -33,9 +32,9 @@ class projects extends Model
         'files' => 'json',
     ];
 
-    public function developers()
+    public function projectAuthors()
     {
-        return $this->belongsToMany(developers::class, 'project_developers', 'projects_id', 'developers_id');
+        return $this->belongsToMany(developers::class, 'project_developers');
     }
 
     public function category()

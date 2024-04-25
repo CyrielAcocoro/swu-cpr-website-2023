@@ -1,6 +1,6 @@
 <section class="bg-white-500">
     <div class="relative grid max-w-screen-3xl h-[1000px] px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-20 lg:grid-cols-12">
-        <div class="place-self-center mb-24 lg:col-span-5 prose prose-p:text-dark_grey-100 prose-p:text-2xl prose-slate dark:prose-invert w-full">
+        <div class="place-self-center mb-24 lg:col-span-5 prose prose-p:text-dark_grey-100 prose-p:text-xl prose-slate dark:prose-invert w-full">
             <h1 class=" text-6xl xl:text-6xl mb-4 bg-gradient-to-r from-maroon-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent text-phaser ">{{ $headlineTitle }}</h1>
             <p class="max-w-2xl mb-6 lg:mb-8">{{$headlineDescription}}</p>
             <div class="flex flex-row items-center gap-5 my-2">

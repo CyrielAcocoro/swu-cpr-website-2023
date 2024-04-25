@@ -1,9 +1,9 @@
   <x-modal-wrapper>
-      <div class="prose prose-slate prose-p:text-lg dark:prose-invert flex flex-col justify-center gap-6 p-6 max-w-screen-xl mx-auto">
+      <div class="prose prose-slate prose-p:text-lg flex flex-col justify-center gap-6 p-6 max-w-screen-xl mx-auto">
           <div class="flex items-center justify-between px-12 ">
               <div class="flex flex-row items-center gap-4">
                   @if($selectedProject)
-                  <img src="{{ url('/admin-images/' . $selectedProject->files[0]) }}" alt="project image" class="h-12 w-12 rounded-lg object-contain">
+                  <img src="{{ url('/admin-images/' . $selectedProject->files[0]) }}" alt="project image" class="h-12 w-12 rounded-lg object-cover">
                   @endif
                   <div class="flex flex-col">
                       <h3 class="text-start m-0 font-bold">{{$selectedProject ? $selectedProject->title : ''}}</h2>
@@ -41,7 +41,7 @@
               <!-- Carousel Slide Items -->
               <div class="relative w-full h-[712px] overflow-hidden rounded-lg">
                   @foreach($selectedProject->files as $file)
-                  <div class="{{ $selectedImage === $file ? 'opacity-100' : 'opacity-0' }} absolute inset-0 transition-opacity duration-700 ease-in-out flex items-center justify-center bg-slate-100" data-carousel-item>
+                  <div class="{{ $selectedImage === $file ? 'opacity-100' : 'opacity-0' }} absolute inset-0 transition-opacity duration-700 ease-in-out flex items-center justify-center bg-maroon-800" data-carousel-item>
                       <img class="object-contain aspect-square" src="{{ url('/admin-images/' . $file) }}" />
                   </div>
                   @endforeach
@@ -73,8 +73,10 @@
               </div>
           </div>
           @endif
-          <div class="flex flex-col gap-6 mb-12 md:flex-row">
-              <div class="flex basis-2/3 justify-between flex-grow flex-col p-8 rounded-xl gap-8 bg-white shadow-card">
+          <!-- Infomration Details -->
+          <div class="flex flex-col gap-6 mb-12 lg:flex-row">
+              <!-- Project Description and Details -->
+              <div class="flex flex-grow justify-between flex-col p-8 rounded-xl gap-8 bg-white shadow-card lg:w-2/3">
                   <div class="flex flex-col gap-3">
                       <h3 class="m-0 font-bold text-start">Project Description</h3>
                       <p class="text-start">{{$selectedProject ? $selectedProject->description : ''}}</p>
@@ -82,7 +84,7 @@
                   <div class="flex flex-col gap-3">
                       <h3 class="m-0 font-bold text-start">Data Privacy</h3>
                       @if($selectedProject && $selectedProject->data_privacy)
-                      <p class="text-start">{{$selectedProject ? $selectedProject->data_privacy : ''}}</p>
+                      <a href="{{$selectedProject ? $selectedProject->data_privacy : ''}}" class="text-start text-wrap">{{$selectedProject ? $selectedProject->data_privacy : ''}}</a>
                       @else
                       <p class="text-start">**No project privacy policy available</p>
                       @endif
@@ -106,31 +108,41 @@
                       </div>
                   </div>
               </div>
-              <div class="flex flex-col basis-1/3 gap-6">
+              <!-- Developers and Project Preview -->
+              <div class="flex flex-col gap-6 lg:w-1/3">
                   @if($selectedProject)
-                  <div class="flex flex-col basis-2/3 p-5 rounded-xl gap-5 bg-white shadow-card">
+                  <!-- Developers -->
+                  <div class="flex flex-col flex-grow p-5 rounded-xl gap-5 bg-white shadow-card lg:w-full">
                       <h3 class="font-bold m-0 text-start">Developers</h3>
-                      @foreach($selectedProject->developers as $developer)
+                      @foreach($selectedProject->projectAuthors as $developer)
                       <div class="flex flex-row gap-2 px-2 items-center">
-                          <img src="{{ url('/admin-images/' . $developer->image) }}" alt="developer avatar" class="h-12 object-cover flex m-0">
-                          <div class="flex flex-col m">
-                              <h4 class="text-start m-0 font-bold ">{{ $developer->full_name }}</h4>
-                              <h5 class="text-start m-0 font-normal">{{ $developer->email }}</h5>
-                              <h6 class="text-start m-0 font-normal">{{ $developer->city }}, {{ $developer->province }}, {{ $developer->country }}</h6>
+                          <img src="{{ url('/admin-images/' . $developer->image) }}" alt="developer avatar" class="h-12 object-cover rounded-full m-0">
+                          <div class="flex flex-col items-start gap-2">
+                              <h4 class="text-lg font-bold text-gray-900 m-0">{{ $developer->full_name }}</h4>
+                              <div class="flex items-center gap-2">
+                                  <i class="far fa-envelope text-gray-500"></i>
+                                  <a href="mailto:{{ $developer->email }}" class="text-sm text-gray-700">{{ $developer->email }}</a>
+                              </div>
+                              <div class="flex items-center gap-2">
+                                  <i class="fas fa-map-marker-alt"></i>
+                                  <p class="text-sm text-gray-700 m-0">{{ $developer->city }}, {{ $developer->province }}, {{ $developer->country }}</p>
+                              </div>
                           </div>
                       </div>
                       @endforeach
                   </div>
-                  @endif
-                  <div class="flex flex-col basis-1/3 p-5 rounded-xl gap-5 bg-white shadow-card">
+                  <!-- Project Preview -->
+                  <div class="flex flex-col flex-grow p-5 rounded-xl bg-white shadow-card lg:w-full">
                       <h3 class="m-0 font-bold text-start">Project Preview</h3>
                       @if($selectedProject && $selectedProject->project_link)
-                      <a href="{{ $selectedProject->project_link }}" class="text-start">{{ $selectedProject->project_link }}</a>
+                      <a href="{{ $selectedProject->project_link }}" class="text-start truncate whitespace-normal">{{ $selectedProject->project_link }}</a>
                       @else
                       <p class="text-start">**No project preview available</p>
                       @endif
                   </div>
+                  @endif
               </div>
           </div>
+
       </div>
   </x-modal-wrapper>

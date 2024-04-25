@@ -20,7 +20,7 @@ class ProjectContent extends Component
 
     use WithPagination;
 
-    public $perPage = 40;
+    public $perPage = 20;
     public $page = 1;
 
     public $filterKey = 0;
@@ -92,7 +92,7 @@ class ProjectContent extends Component
 
         if ($this->search) {
             $query->where('title', 'like', '%' . $this->search . '%')
-                ->orWhereHas('developers', function ($query) {
+                ->orWhereHas('projectAuthors', function ($query) {
                     $query->where('first_name', 'like', '%' . $this->search . '%')
                         ->orWhere('last_name', 'like', '%' . $this->search . '%');
                 });
@@ -112,10 +112,10 @@ class ProjectContent extends Component
             $query->where('category_id', $this->filteredProject);
         }
 
-        $newProjects = $query->offset(($this->page - 1) * $this->perPage)
+        $newProjects = $query->with(['projectAuthors'])
+            ->offset(($this->page - 1) * $this->perPage)
             ->limit($this->perPage)
             ->get();
-
         if ($newProjects->isNotEmpty()) {
             $this->projects = collect($this->projects)->merge($newProjects)->all();
         }

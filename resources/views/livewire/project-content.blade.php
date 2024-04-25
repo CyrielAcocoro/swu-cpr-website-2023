@@ -1,7 +1,7 @@
 <div class="bg-white-500 flex flex-col items-start justify-start mx-auto py-8 h-fit">
-    <div class="flex flex-col lg:flex-row items-start justify-start mx-6 w-full h-full divide-y lg:divide-y-0 lg:divide-x">
+    <div class="flex flex-col lg:flex-row items-start justify-start w-full h-full divide-y lg:divide-y-0 lg:divide-x">
         <!-- Search and Categories Section -->
-        <div class="flex flex-grow py-4 lg:flex-shrink-0 lg:basis-1/12 px-4 lg:mb-0 items-start justify-start max-h-full w-screen">
+        <div class="flex flex-row flex-grow py-4 lg:flex-shrink-0 lg:basis-1/12 px-4 lg:mb-0 items-start justify-start max-h-full">
             <div class="flex flex-col items-start justify-start gap-2 w-full h-full ">
                 <input type="text" wire:model="search" wire:keydown.enter="updateSearch" placeholder="Search" aria-label="Search" class="rounded p-2 border border-gray-300 transition duration-300 ease-in-out hover:border-yellow-300 focus:border-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-opacity-50 bg-white w-full" />
                 <div class="flex lg:flex-col max-w-screen-2xl w-full">
@@ -69,22 +69,30 @@
                 <div class="bg-white flex flex-col items-center justify-center bg-white shadow-md bg-clip-border rounded-xl max-w-md m-2 cursor-pointer transform transition duration-500 hover:scale-105">
                     @if (!empty($project->files) && count($project->files) > 0)
                     <button x-data wire:click="$dispatchTo('project-modal','show', [{{ $project->id }}])" loading="lazy" class="w-[370px]">
-                        <img class="relative rounded-t-lg object-contain cursor-pointer w-full h-[270px] " alt="Project Image" src="{{ asset('/admin-images/'. $project->files[0]) }}" />
+                        <img class="relative rounded-t-lg object-cover cursor-pointer w-full h-[270px] " alt="Project Image" src="{{ asset('/admin-images/'. $project->files[0]) }}" />
                     </button>
                     @endif
                     <h2 class="text-dark_gray-400 text-start font-bold text-sm md:text-base lg:text-xl w-full px-4 pt-2">{{$project->title}}</h2>
-                    <div class="w-full flex flex-row items-center pb-[8px] ">
+                    <div class="w-full flex flex-row items-center pb-[8px]">
                         <div class="flex flex-row items-center gap-2 px-4 pt-2">
+                            @if($project->projectAuthors->isNotEmpty())
                             <div class="rounded-full w-6 h-6 flex items-center justify-center border border-gray-300">
-                                <i class="fa-solid fa-user-tie text-base text-gray-700"></i>
+                                <img src="{{ url('/admin-images/' . $project->projectAuthors->first()->image) }}" alt="First developer's image" class="h-full w-full rounded-full object-cover">
                             </div>
-                            <p class="leading-4 text-xs font-medium line-clamp-1 w-60 md:text-sm lg:text-base">
-                                @foreach ($project->developer as $developerId)
-                                {{ $developerId }}
+                            @endif
+                            <div class="flex-grow whitespace-nowrap overflow-hidden w-[370px]">
+                                @foreach($project->projectAuthors as $developer)
+                                <p class="text-base font-normal inline-block">
+                                    {{ $developer->full_name }}
+                                </p>
+                                @if (!$loop->last)
+                                <span class="inline-block">, </span>
+                                @endif
                                 @endforeach
-                            </p>
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 @endif
                 @endforeach

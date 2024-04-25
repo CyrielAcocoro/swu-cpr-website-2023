@@ -38,8 +38,8 @@
             <a class="hover:text-yellow-400" href="/" wire:navigate> Home </a>
             <a class="hover:text-yellow-400" href="/project" wire:navigate> Projects </a>
             <a class="hover:text-yellow-400" href="/faculty" wire:navigate> Faculty </a>
-            <a class="hover:text-yellow-400" href="/about" wire:navigate> About </a>
             <a class="hover:text-yellow-400" href="/student-developer" wire:navigate> Students </a>
+            <a class="hover:text-yellow-400" href="/about" wire:navigate> About </a>
           </nav>
         </div>
         <div>

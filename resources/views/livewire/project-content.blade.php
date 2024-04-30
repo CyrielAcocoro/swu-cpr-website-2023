@@ -69,7 +69,7 @@
                 <div class="bg-white flex flex-col items-center justify-center bg-white shadow-md bg-clip-border rounded-xl max-w-md m-2 cursor-pointer transform transition duration-500 hover:scale-105">
                     @if (!empty($project->files) && count($project->files) > 0)
                     <button x-data wire:click="$dispatchTo('project-modal','show', [{{ $project->id }}])" loading="lazy" class="w-[370px]">
-                        <img class="relative rounded-t-lg object-cover cursor-pointer w-full h-[270px] " alt="Project Image" src="{{ config('app.custom.virtual_directory_base_url') . 'admin-images/'. $project->files[0]) }}" />
+                        <img class="relative rounded-t-lg object-cover cursor-pointer w-full h-[270px] " alt="Project Image" src="{{ config('app.custom.virtual_directory_base_url') . $project->files[0]) }}" />
                     </button>
                     @endif
                     <h2 class="text-dark_gray-400 text-start font-bold text-sm md:text-base lg:text-xl w-full px-4 pt-2">{{$project->title}}</h2>
@@ -77,7 +77,7 @@
                         <div class="flex flex-row items-center gap-2 px-4 pt-2">
                             @if($project->projectAuthors->isNotEmpty())
                             <div class="rounded-full w-6 h-6 flex items-center justify-center border border-gray-300">
-                                <img src="{{ config('app.custom.virtual_directory_base_url') . 'admin-images/' . $project->projectAuthors->first()->image) }}" alt="First developer's image" class="h-full w-full rounded-full object-cover">
+                                <img src="{{ config('app.custom.virtual_directory_base_url') . $project->projectAuthors->first()->image) }}" alt="First developer's image" class="h-full w-full rounded-full object-cover">
                             </div>
                             @endif
                             <div class="flex-grow whitespace-nowrap overflow-hidden w-[370px]">

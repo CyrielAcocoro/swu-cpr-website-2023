@@ -189,7 +189,7 @@ return [
 
     // custom url
     'custom' => [
-        'virtual_directory_base_url' => env('VIRTUAL_DIRECTORY_BASE_URL', 'http://default-url.com/'),
+        'virtual_directory_base_url' => env('VIRTUAL_DIRECTORY_BASE_URL', 'http://itch.swudevs.com/cpr-website-access-to-admin/'),
     ],
 
 ];

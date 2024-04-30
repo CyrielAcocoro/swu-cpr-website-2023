@@ -1,7 +1,7 @@
     <header class="bg-maroon-700 opacity-90 backdrop-blur bg-glass shadow-md py-5 px-4 lg:px-10 sticky top-0 z-50">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
             <a href="/" class="flex items-center space-x-4">
-                <img src="{{ config('app.custom.virtual_directory_base_url') . 'admin-images/'. $logo->image)}}" alt="University Logo" class="h-14 object-cover">
+            <img src="{{ config('app.custom.virtual_directory_base_url') . $logo->image}}" alt="University Logo" class="px-2 h-6 sm:h-9">
                 <div class="flex flex-col">
                     <b class="text-white-500 text-lg ">Southwestern University - PHINMA</b>
                     <div class="text-base text-white-500">{{$logo->name}}</div>

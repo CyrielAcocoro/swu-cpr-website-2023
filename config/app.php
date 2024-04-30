@@ -186,4 +186,10 @@ return [
         'Share' => Jorenvh\Share\ShareFacade::class,
     ])->toArray(),
 
+
+    // custom url
+    'custom' => [
+        'virtual_directory_base_url' => env('VIRTUAL_DIRECTORY_BASE_URL', 'http://default-url.com/'),
+    ],
+
 ];

@@ -52,7 +52,7 @@
             @if($project->is_featured === "1")
             <!-- Carousel Item -->
             <div class="{{ $loop->first ? '' : 'hidden' }} transition duration-700 ease-in-out" data-carousel-item="{{ $loop->first ? 'active' : '' }}">
-                <x-featured title="{{$project->title}}" description="{{$project->description}}" featuredImage="{{ asset('/admin-images/'. $project->files[0]) }}" />
+                <x-featured title="{{$project->title}}" description="{{$project->description}}" featuredImage="{{ config('app.custom.virtual_directory_base_url') . 'admin-images/' . $project->files[0]) }}" />
             </div>
             @endif
             @endforeach

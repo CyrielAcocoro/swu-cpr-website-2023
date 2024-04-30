@@ -69,7 +69,6 @@ return [
     |
     */
     'links' => [
-        public_path('storage') => storage_path('app/public'),
-        public_path('admin-images') => '../SWU-CPR-ADMIN/storage/app/public',
+        public_path('admin-images') => '../swu-cpr-admin/storage/app/public',
     ],
 ];

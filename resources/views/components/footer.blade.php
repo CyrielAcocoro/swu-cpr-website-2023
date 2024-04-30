@@ -3,7 +3,7 @@
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
         <div class="flex flex-row justify-start items-center">
-          <img src="{{ url('/images/cite-logo.png') }}" alt="University Logo" class="px-2 h-6 sm:h-9">
+          <img src="{{ config('app.custom.virtual_directory_base_url') . 'admin-images/'. $logo->image)}}" alt="University Logo" class="px-2 h-6 sm:h-9">
           <div class="flex flex-col">
             <b class="text-white-400 text-lg">Southwestern University - PHINMA</b>
             <div class="text-white-400 text-base">College of Information Technology</div>

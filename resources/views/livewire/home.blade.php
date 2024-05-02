@@ -1,6 +1,6 @@
-<main class="mb-auto w-screen">
+<main class="mb-auto w-full min-h-screen">
     <x-hero headlineDescription="{{$headline->description}}" headlineTitle="{{$headline->title }}" />
-    <div class="flex flex-col justify-center items-center w-full mx-auto space-y-8 py-16 bg-white-500">
+    <div class="flex flex-col justify-center items-center w-full space-y-8 py-16 bg-white-500">
         <div class="flex flex-col justify-center w-full">
             <h3 class="text-center text-2xl mb-2 font-normal">University Project Repository</h3>
             <h1 class="text-center text-4xl font-semibold">Repository for storing and accessing IT students projects and research</h1>

@@ -9,7 +9,7 @@
   </p>
   <div class="flex flex-col items-center justify-center mt-4">
     <b>Specialization</b>
-    <p class="flex flex-grow">
+    <p class="flex flex-grow text-center">
       {{$specialization}}
     </p>
   </div>

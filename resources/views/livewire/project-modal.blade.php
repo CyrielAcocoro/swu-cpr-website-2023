@@ -135,7 +135,7 @@
                   <div class="flex flex-col flex-grow p-5 rounded-xl bg-white shadow-card lg:w-full">
                       <h3 class="m-0 font-bold text-start">Project Preview</h3>
                       @if($selectedProject && $selectedProject->project_link)
-                      <a href="{{ $selectedProject->project_link }}" class="text-start truncate whitespace-normal">{{ $selectedProject->project_link }}</a>
+                      <a href="{{ $selectedProject->project_link }}"  target="_blank" class="text-start truncate whitespace-normal">{{ $selectedProject->project_link }}</a>
                       @else
                       <p class="text-start">**No project preview available</p>
                       @endif

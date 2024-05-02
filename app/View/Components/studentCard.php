@@ -18,17 +18,17 @@ class studentCard extends Component
 
     public $linkedinLink;
 
-    public function __construct($fullName, $email, $city, $province, $country, $image, $githubLink, $linkedinLink)
-    {
-        $this->fullName = $fullName;
-        $this->email = $email;
-        $this->city = $city;
-        $this->province = $province;
-        $this->country = $country;
-        $this->image = $image;
-        $this->githubLink = $githubLink;
-        $this->linkedinLink = $linkedinLink;
-    }
+    public function __construct($fullName, $email, $city, $province, $country, $image, $githubLink = null, $linkedinLink = null)
+{
+    $this->fullName = $fullName;
+    $this->email = $email;
+    $this->city = $city;
+    $this->province = $province;
+    $this->country = $country;
+    $this->image = $image;
+    $this->githubLink = $githubLink;
+    $this->linkedinLink = $linkedinLink;
+}
 
     /**
      * Get the view / contents that represent the component.

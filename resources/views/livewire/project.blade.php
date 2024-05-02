@@ -10,7 +10,6 @@
                     {{$projectHeadline->headline}}
                 </h1>
                 @else
-
                 <h1 class="relative text-2xl text-white-500">
                     There are no project headlines available at the moment.
                 </h1>

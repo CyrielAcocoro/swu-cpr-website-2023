@@ -52,7 +52,7 @@ export default {
             animation: {
                 "infinite-scroll": "infinite-scroll 40s linear infinite",
                 "text-phaser": "text-phaser 3s linear infinite",
-                fadeIn: "fadeIn 2s ease-out forwards",
+                fadeIn: "fadeIn 1s ease-out forwards",
             },
             keyframes: {
                 "infinite-scroll": {

@@ -9,6 +9,7 @@ use Illuminate\View\Component;
 class studentCard extends Component
 {
     public $fullName;
+    public $studentYearLevel;
     public $email;
     public $city;
     public $province;
@@ -18,9 +19,10 @@ class studentCard extends Component
 
     public $linkedinLink;
 
-    public function __construct($fullName, $email, $city, $province, $country, $image, $githubLink = null, $linkedinLink = null)
+    public function __construct($fullName, $studentYearLevel, $email, $city, $province, $country, $image, $githubLink = null, $linkedinLink = null)
 {
     $this->fullName = $fullName;
+    $this->studentYearLevel = $studentYearLevel;
     $this->email = $email;
     $this->city = $city;
     $this->province = $province;

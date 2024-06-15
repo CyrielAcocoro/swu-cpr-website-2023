@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Route;
 class Navbar extends Component
 {
     public $logo;
-    public $isMobileMenuOpen = false;
     public $currentRoute;
 
     public function mount()
@@ -18,15 +17,11 @@ class Navbar extends Component
         $this->currentRoute = Route::currentRouteName();
     }
 
-    public function toggleMobileMenu()
-    {
-        $this->isMobileMenuOpen = !$this->isMobileMenuOpen;
-    }
-
     public function render()
     {
         return view('livewire.navbar', [
             'logo' => $this->logo,
+            'currentRoute' => $this->currentRoute,
         ]);
     }
 }

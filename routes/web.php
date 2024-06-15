@@ -30,4 +30,3 @@ Route::get('/project', Project::class)->name('project');
 Route::get('/student-developer', StudentDeveloper::class)->name('student-developer');
 Route::get('/privacypolicy', PrivacyPolicy::class)->name('privacypolicy');
 Route::get('/project/{id}', ProjectDetails::class);
-

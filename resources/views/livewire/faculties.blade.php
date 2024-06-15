@@ -22,7 +22,7 @@
             </div>
         </div>
         <div id="facultyElement" class="m-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-12 py-12 m-auto max-w-screen-2xl">
+        <div class="flex flex-wrap p-8 gap-4 sm:gap-8 mx-auto w-full border rounded-md justify-center">
                 @foreach ($faculty as $facultyMember)
                 <x-faculty-card alt="{{ $facultyMember->fullName }}" about="{{ $facultyMember->about }}" avatar="{{ config('app.custom.virtual_directory_base_url'). $facultyMember->image}}" name="{{ $facultyMember->fullName }}" position="{{ $facultyMember->position }}" specialization="{{ is_array(json_decode($facultyMember->specialization))? implode(', ', json_decode($facultyMember->specialization)) : $facultyMember->specialization }}" />
                 @endforeach

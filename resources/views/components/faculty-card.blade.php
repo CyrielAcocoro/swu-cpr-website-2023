@@ -1,4 +1,4 @@
-<div class="flex flex-col p-8 items-center justify-start rounded-lg bg-white-500 shadow-xl ">
+<div class="flex flex-col items-center p-6 rounded-md bg-white-500 shadow-md gap-4 w-[520px]">
   <img class="rounded-2xl w-36 h-36 overflow-hidden shrink-0 object-cover" alt="{{ $alt }}" src="{{$avatar}}" />
   <div class="flex flex-col items-center justify-center mt-4 text-wrap">
     <h3 class="font-medium m-0 text-xl text-balance">{{$name}}</h3>

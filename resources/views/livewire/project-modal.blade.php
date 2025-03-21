@@ -3,7 +3,7 @@
           <div class="flex items-center justify-between px-12 ">
               <div class="flex flex-row items-center gap-4">
                   @if($selectedProject)
-                  <img src="{{ config('app.custom.virtual_directory_base_url') . $selectedProject->files[0] }}" alt="project image" class="h-12 w-12 rounded-lg object-cover">
+                  <img src="{{ url('/admin-images/' . $selectedProject->files[0]) }}" alt="project image" class="h-12 w-12 rounded-lg object-cover">
                   @endif
                   <div class="flex flex-col">
                       <h3 class="text-start m-0 font-bold">{{$selectedProject ? $selectedProject->title : ''}}</h2>
@@ -42,7 +42,7 @@
               <div class="relative w-full h-[712px] overflow-hidden rounded-lg">
                   @foreach($selectedProject->files as $file)
                   <div class="{{ $selectedImage === $file ? 'opacity-100' : 'opacity-0' }} absolute inset-0 transition-opacity duration-700 ease-in-out flex items-center justify-center bg-maroon-800" data-carousel-item>
-                      <img class="object-contain aspect-square" src="{{ config('app.custom.virtual_directory_base_url') . $file}}" />
+                      <img class="object-contain aspect-square" src="{{ url('/admin-images/' . $file) }}" />
                   </div>
                   @endforeach
               </div>
@@ -67,7 +67,7 @@
               <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
                   @foreach($selectedProject->files as $index => $file)
                   <button type="button" class="w-10 h-10 rounded-md transform transition duration-500 hover:scale-125 {{ $selectedImage === $file ? 'ring-2 ring-offset-2 ring-offset-gray-100 ring-white' : '' }}" aria-current="{{ $selectedImage === $file ? 'true' : 'false' }}" wire:click="$set('selectedImage', '{{ $file }}')">
-                      <img class="object-cover w-full h-full rounded-md m-0" src="{{ config('app.custom.virtual_directory_base_url') . $file }}" alt="Slide {{ $index + 1 }}">
+                      <img class="object-cover w-full h-full rounded-md m-0" src="{{ url('/admin-images/' . $file) }}" alt="Slide {{ $index + 1 }}">
                   </button>
                   @endforeach
               </div>
@@ -116,7 +116,7 @@
                       <h3 class="font-bold m-0 text-start">Developers</h3>
                       @foreach($selectedProject->projectAuthors as $developer)
                       <div class="flex flex-row gap-2 px-2 items-center">
-                          <img src="{{ config('app.custom.virtual_directory_base_url') . $developer->image }}" alt="developer avatar" class="h-12 object-cover rounded-full m-0">
+                          <img src="{{ url('/admin-images/' . $developer->image) }}" alt="developer avatar" class="h-12 object-cover rounded-full m-0">
                           <div class="flex flex-col items-start gap-2">
                               <h4 class="text-lg font-bold text-gray-900 m-0">{{ $developer->full_name }}</h4>
                               <div class="flex items-center gap-2">
@@ -135,7 +135,7 @@
                   <div class="flex flex-col flex-grow p-5 rounded-xl bg-white shadow-card lg:w-full">
                       <h3 class="m-0 font-bold text-start">Project Preview</h3>
                       @if($selectedProject && $selectedProject->project_link)
-                      <a href="{{ $selectedProject->project_link }}"  target="_blank" class="text-start truncate whitespace-normal">{{ $selectedProject->project_link }}</a>
+                      <a href="{{ $selectedProject->project_link }}" target="_blank" class="text-start truncate whitespace-normal">{{ $selectedProject->project_link }}</a>
                       @else
                       <p class="text-start">**No project preview available</p>
                       @endif

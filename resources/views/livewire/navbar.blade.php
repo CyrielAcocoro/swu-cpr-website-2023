@@ -1,7 +1,7 @@
 <header class=" dark:bg-gray-900 bg-maroon-700 opacity-90 backdrop-blur bg-glass shadow-md py-5 px-4 lg:px-10 sticky top-0 z-50">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div class="max-w-screen-3xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" class="flex items-center space-x-4 rtl:space-x-reverse">
-            <img src="{{ config('app.custom.virtual_directory_base_url').$logo->image }}" alt="University Logo" class="h-16" />
+            <img src="{{ asset('/admin-images/'. $logo->image)}}" alt="University Logo" class="h-16" />
             <div class="flex flex-col">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white-400 dark:text-white">Southwestern University - PHINMA</span>
                 <span class="text-xl font-regular whitespace-nowrap text-white-400 dark:text-white">College of Information Technology</span>

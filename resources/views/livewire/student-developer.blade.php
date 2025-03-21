@@ -12,15 +12,15 @@
         </div>
         <div class="flex flex-wrap p-4 sm:p-8 gap-4 sm:gap-8 mx-auto w-full border rounded-md justify-center">
             @foreach ($developers as $developer)
-                <x-student-card class="flex-grow sm:flex-shrink-0" full-name="{{ $developer->full_name }}"
-                    studentYearLevel="{{ $developer->student_year_level }}"
-                    email="{{ $developer->email }}"
-                    city="{{ $developer->city }}"
-                    province="{{ $developer->province }}"
-                    country="{{ $developer->country }}"
-                    image="{{ config('app.custom.virtual_directory_base_url'). $developer->image }}"
-                    linkedinLink="{{ $developer->linkedin }}"
-                    githubLink="{{ $developer->github }}" />
+            <x-student-card class="flex-grow sm:flex-shrink-0" full-name="{{ $developer->full_name }}"
+                studentYearLevel="{{ $developer->student_year_level }}"
+                email="{{ $developer->email }}"
+                city="{{ $developer->city }}"
+                province="{{ $developer->province }}"
+                country="{{ $developer->country }}"
+                image="{{ asset('/admin-images/' . $developer->image) }}"
+                linkedinLink="{{ $developer->linkedin }}"
+                githubLink="{{ $developer->github }}" />
             @endforeach
         </div>
     </div>

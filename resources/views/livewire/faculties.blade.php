@@ -24,7 +24,7 @@
         <div id="facultyElement" class="m-4">
             <div class="flex flex-wrap p-8 gap-4 sm:gap-8 mx-auto w-full border rounded-md justify-center">
                 @foreach ($faculty as $facultyMember)
-                <x-faculty-card alt="{{ $facultyMember->fullName }}" about="{{ $facultyMember->about }}" avatar="{{ asset('/admin-images/' . $facultyMember->image) }}" name="{{ $facultyMember->fullName }}" position="{{ $facultyMember->position }}" specialization="{{ is_array($facultyMember->specialization) ? implode(', ', $facultyMember->specialization) : (is_string($facultyMember->specialization) ? implode(', ', json_decode($facultyMember->specialization, true)) : $facultyMember->specialization) }}" />
+                <x-faculty-card alt="{{ $facultyMember->fullName }}" about="{{ $facultyMember->about }}" avatar="{{ asset('/admin-images/' . $facultyMember->image) }}" name="{{ $facultyMember->fullName }}" position="{{ $facultyMember->position }}" specialization="{!! $facultyMember->specialization_display !!}" />
                 @endforeach
             </div>
         </div>
